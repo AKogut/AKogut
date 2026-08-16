@@ -18,6 +18,17 @@
 <a href="https://www.linkedin.com/in/andrii-kohut/"><img src="https://img.shields.io/badge/LinkedIn-andrii--kohut-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:a.kogut01@gmail.com"><img src="https://img.shields.io/badge/Email-a.kogut01%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=AKogut&hide_border=true&theme=dark&background=00000000&ring=2A9D8F&fire=2A9D8F&currStreakLabel=2A9D8F" />
+  <img src="https://streak-stats.demolab.com?user=AKogut&hide_border=true&background=00000000&ring=2A9D8F&fire=2A9D8F&currStreakLabel=2A9D8F" alt="GitHub contribution streak" />
+</picture>
+
+<br/>
+
+<img src="https://ghchart.rshah.org/2a9d8f/AKogut" width="92%" alt="Contribution graph" />
+
 </div>
 
 ## 🧭 whoami
@@ -136,13 +147,6 @@ Two products, both mine from A to Z — product thinking, code, infrastructure a
 <img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude" />
 <img src="https://img.shields.io/badge/Cursor-0d1117?style=flat-square" alt="Cursor" />
 <img src="https://img.shields.io/badge/Devin-0d1117?style=flat-square" alt="Devin" />
-
-## 📈 GitHub
-
-<div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=AKogut&show_icons=true&hide_border=true&theme=transparent&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AKogut&layout=compact&hide_border=true&theme=transparent&langs_count=8" alt="Top languages" />
-</div>
 
 ## 📫 Reach me
 
