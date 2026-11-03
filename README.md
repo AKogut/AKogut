@@ -28,6 +28,7 @@
 - 🌍 Domains: **B2B SaaS and fintech** — on web, mobile web, native iOS and Android (React / React Native apps under test).
 - 🚀 I'm building two products of my own, end to end: **[Forma](https://github.com/forma-finance)** — a financial operating system for freelancers, and **[Zagaday](https://github.com/zagaday)** — AI-personalized party games.
 - 🚧 In the open, I'm building **[Flakemetry](https://github.com/AKogut/flakemetry)** (test runs as traces) and **[Sentra](https://github.com/AKogut/ai-flaky-test-triage)** (AI triage for CI failures) — and pushing **AI-assisted quality engineering** well past autocomplete.
+- 🤖 My open-source repos have a maintainer of their own: **[kogut](https://github.com/AKogut/ai-agentic-workflow)**, an agent built on Claude Code that reviews Dependabot PRs, diagnoses red CI and audits repo hygiene — policy in code, judgement in the model.
 
 ## 🎯 Problems I solve
 
@@ -39,6 +40,7 @@
 | *"Our E2E suite collapsed as soon as a second person touched it."* | Architecture before scripts: page objects, fixtures and selectors as **separate layers**, suites split by trigger, a global health check that fails fast with a reason. Built for a team to **extend**, not just to run. | [Playwright E2E framework](https://github.com/AKogut/playwright-ecommerce-framework) |
 | *"API tests are green, but integrations still break in production."* | Test **contracts, not status codes**: schema validation on every response — including **across services** — consumer-driven contracts with Pact, property-based tests that generate the edge cases nobody hard-codes, and k6 performance budgets. | [Microservices API testing](https://github.com/AKogut/restful-booker-api-testing) |
 | *"Appium or native? Everyone argues, nobody measures."* | Test the **same app three ways** — Appium, XCUITest, Espresso — behind one CI pipeline with a combined report, so the trade-off is demonstrated on evidence, not opinion. | [Mobile automation, 3 ways](https://github.com/AKogut/mobile-task-manager-automation) |
+| *"Dependabot PRs pile up — and green CI doesn't prove an upgrade is safe."* | Split the work: **policy in code, judgement in the model.** Tested scripts own the merge gate; the AI only reads release notes against the code actually in use and explains red workflows. It can hold a PR back, never merge past a blocker, and I approve every merge. | [kogut](https://github.com/AKogut/ai-agentic-workflow) |
 | *"We have no automation at all. Where do we even start?"* | Build the framework from scratch, wire it into CI/CD from day one, and mentor the team until the system is **theirs** — I optimise for what keeps working after I leave the room. | every repo here started as an empty folder |
 
 ## ⚙️ How I work
@@ -83,6 +85,7 @@ Two products, both mine from A to Z — product thinking, code, infrastructure a
 |---|---|---|---|
 | **[Flakemetry](https://github.com/AKogut/flakemetry)** | OpenTelemetry-native test-intelligence platform — test observability, explainable flaky-test detection, AI root-cause analysis; Playwright, Vitest and Jest reporters published to npm, plus a pytest plugin | TypeScript · OpenTelemetry · Fastify · PostgreSQL · Next.js · Helm | `▓▓▓▓▓▓▓▓░░` ~80% · 🟢 **active — usable today** (M0–M4 & M7 shipped; scale & launch next) |
 | **[Sentra — AI flaky-test triage](https://github.com/AKogut/ai-flaky-test-triage)** | AI triage layer for CI failures — two-axis classification, root-cause & fix-suggestion agents, one PR comment; evaluated on a hand-labelled golden dataset vs a non-LLM baseline | TypeScript · Claude API · Zod · Vitest · Playwright · GitHub Actions | `▓▓▓▓▓▓░░░░` ~60% · 🟢 **active — full pipeline runs in replay mode** (baseline scoring, ablations & v1.0 next) |
+| **[kogut — agentic maintainer](https://github.com/AKogut/ai-agentic-workflow)** | Maintenance agent for the six repos in this table — reviews Dependabot PRs (incl. breaking changes behind green CI), diagnoses red workflows, audits hygiene, opens fix PRs under its own GitHub App, reports per repo to Discord | Claude Code · Bash · jq · GitHub App · Discord | `▓▓▓▓▓▓▓▓▓▓` 14/14 roadmap items · 🟢 **live — maintaining this portfolio** |
 | **[Ephemeral K8s Test Envs](https://github.com/AKogut/ephemeral-k8s-test-envs)** | Per-pull-request ephemeral environments on Kubernetes — isolated namespaces, 113 API tests sharded across 4 Indexed-Job pods (~3.2× faster), aggregated Allure report, teardown the pipeline proves | TypeScript · Kubernetes · Helm · kind · Docker · Allure | `▓▓▓▓▓▓▓▓▓▓` 100% · ✅ **complete — reference build** |
 | **[Playwright E-Commerce Framework](https://github.com/AKogut/playwright-ecommerce-framework)** | Layered E2E framework built for a team to extend — POM, fixtures, selectors, tagged critical / smoke / regression suites, Chromium · Firefox · WebKit CI matrix, Flakemetry reporter, live test-health dashboard | TypeScript · Playwright · GitHub Actions · Allure | `▓▓▓▓▓▓▓▓▓▓` 100% · ✅ **complete — maintained** |
 | **[Restful Booker API Testing](https://github.com/AKogut/restful-booker-api-testing)** | Production-grade API automation for a Spring Boot microservices platform — nine test layers: Zod contracts incl. cross-service, Pact consumer contracts, property-based, OWASP-oriented security (ZAP), k6 performance budgets | TypeScript · Vitest · Axios · Zod · Pact · k6 · Docker | `▓▓▓▓▓▓▓▓▓▓` 100% · ✅ **complete** |
@@ -90,6 +93,24 @@ Two products, both mine from A to Z — product thinking, code, infrastructure a
 | **Portfolio website** | Personal site & professional portfolio — Next.js, E2E-tested with Playwright (incl. accessibility checks), shipped via GitHub Actions | Next.js · TypeScript · Tailwind · Playwright | `▓▓▓▓▓▓▓▓▓░` ~90% · 🚀 **launching soon** |
 
 <div align="center"><sub>📊 Live test reports: <a href="https://akogut.github.io/playwright-ecommerce-framework/">E2E</a> · <a href="https://akogut.github.io/restful-booker-api-testing/">API</a> · <a href="https://akogut.github.io/mobile-task-manager-automation/">Mobile</a></sub></div>
+
+## 🤖 The agent that maintains all of this
+
+**[kogut](https://github.com/AKogut/ai-agentic-workflow)** is an agentic maintainer built on Claude Code, and it looks after six of the repositories in the table above. It reviews Dependabot PRs, diagnoses failing workflows, audits repo hygiene, tracks every finding as a GitHub issue, opens fix PRs and reports per repository to Discord. It acts as its own GitHub App, `kogut-agent[bot]`, so its work and mine stay apart in the history.
+
+**Why it exists.** The costly failures in a portfolio like this are the quiet ones: a scheduled workflow GitHub switched off, a nightly report that stays red for a week, a major bump whose CI is green only because nothing exercises the code it breaks. A bot that merges whatever is green misses all three.
+
+**How it's built: policy in code, judgement in the model.**
+
+| Who | Decides | How |
+|---|---|---|
+| ⚙️ **Code** | Everything that needs no judgement: the merge gate, failure streaks, flaky and disabled workflows, hygiene | Bash and jq with no model involved, covered by policy tests. The model can hold a PR back, but it can't merge past a blocker. |
+| 🧠 **Model** | Only what code can't: does this major break our code? Why is this workflow red, and what's the smallest fix? | Claude Code reads release notes against real usage, and failed logs against the default branch. |
+| 👤 **Me** | The final call | Every merge goes through a permission prompt. I review and merge every fix PR; kogut never merges its own. |
+
+**Built for hostile input.** kogut reads text written by strangers (release notes, CI logs), so the design assumes that text is an attack: a least-privilege command allowlist, a GitHub App that can't bypass any ruleset, and updates that never run on my machine.
+
+<a href="https://github.com/AKogut/ai-agentic-workflow"><img src="https://img.shields.io/badge/Architecture_%26_threat_model-ai--agentic--workflow-D97757?style=for-the-badge&logo=github&logoColor=white" alt="kogut on GitHub: architecture and threat model" /></a>
 
 ## 🛠️ Toolbox
 
